@@ -74,21 +74,15 @@ middle extra button gestures:
 
 ::\sus::ඞ
 ::\shrug::¯\_(ツ)_/¯
-::\stanford::
-	Run python "C:\Users\jacob\Documents\Scripts\stanford perm\permutations.pyw"
-	Send ^v
-Return
 
 #+b::SoundPlay bruhsoundeffect2.wav	;Win+Shift+B play bruh sound effect 2
-#+Space::Media_Play_Pause 
-#F10::Run "C:\Users\%A_UserName%\Dropbox\Scripts\lightswitch.pyw" desk_lamp_toggle	;toggle desk lamp
-#F11::Run "C:\Users\%A_UserName%\Dropbox\Scripts\lightswitch.pyw" ceiling_light_toggle	;toggle ceiling light
-#F12::Run "C:\Users\%A_UserName%\Dropbox\Scripts\cubeswitch.pyw" cube_lamp_toggle	;toggle cube lamp
-#+F12::Run "C:\Users\%A_UserName%\Dropbox\Scripts\cubeswitch.pyw" cube_lamp_bright	;brighten cube lamp 10%
-#!F12::Run "C:\Users\%A_UserName%\Dropbox\Scripts\cubeswitch.pyw" cube_lamp_dim	;dim cube lamp 10%
+#+Space::Media_Play_Pause
+#F12::Run "scripts\cubeswitch.pyw" cube_lamp_toggle	;toggle cube lamp
+#+F12::Run "scripts\cubeswitch.pyw" cube_lamp_bright	;brighten cube lamp 10%
+#!F12::Run "scripts\cubeswitch.pyw" cube_lamp_dim	;dim cube lamp 10%
 #!+R::Run "C:\Program Files\Rainmeter\Rainmeter.exe" !RefreshApp	;Win+Alt+Shift+R refresh all rainmeter skins
-#!+S::Run "C:\Users\%A_UserName%\Miscellaneous\turn off screen.bat"	;Win+Alt+Shift+S turn off screen
-#+A::Run "C:\Users\%A_UserName%\Dropbox\Scripts\amazonlinkconverter.pyw"
+#!+S::Run "scripts\screenoff.bat"	;Win+Alt+Shift+S turn off screen
+#+A::Run "scripts\amazonlinkconverter.pyw"  ;Win+Shift+A shorten amazon link
 
 #IfWinActive ahk_group Browsers
 F24::^Tab
