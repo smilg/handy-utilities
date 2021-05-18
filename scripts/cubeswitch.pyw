@@ -1,6 +1,6 @@
 '''
 When run with a command line argument, will dim the WiZ smart bulb at the IP address 192.168.1.128.
-Intended to be run by an AutoHotKey shortcut.
+Intended to be run by an AutoHotkey shortcut.
 The following command line args are valid:
 cube_lamp_dim
 cube_lamp_bright
