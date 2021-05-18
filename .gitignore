@@ -1,3 +1,7 @@
+# Non-custom Launchy files
+launchy/Launchy/*
+!launchy/Launchy/launchy.ini
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
