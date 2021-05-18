@@ -1,7 +1,9 @@
 {
     "cSpell.ignoreWords": [
+        "asyncio",
         "fontconfig",
         "launchy",
-        "mathy"
+        "mathy",
+        "pywizlight"
     ]
 }
