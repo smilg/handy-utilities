@@ -106,7 +106,8 @@ middle extra button gestures:
 ::\arrowW::←
 ::\arrowNW::↖
 
-/*======*
+/*
+ *======*
  * MATH *
  *======*
  */
