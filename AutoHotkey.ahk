@@ -152,12 +152,28 @@ middle extra button gestures:
 ::\sub7::₇
 ::\sub8::₈
 ::\sub9::₉
+::\approxequal::≈
+::\>=::≥
+::\<=::≤
+::\notequal::≠
+::\degree::°
+::\times::×
+::\divide::÷
+::\plusminus::±
 
 /*
  *======*
  * MISC *
  *======*
  */
+::\celsius::℃
+::\fahrenheit::℉
+::\copyright::©
+::\trademark::™
+::\reserved::®
+::\pilcrow::¶
+::\section::§
+::\eighthnote::♪
 ::\sus::ඞ
 ::\shrug::¯\_(ツ)_/¯
 
