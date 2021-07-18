@@ -106,6 +106,31 @@ middle extra button gestures:
 ::\arrowW::←
 ::\arrowNW::↖
 
+/*======*
+ * MATH *
+ *======*
+ */
+::\exp0::⁰
+::\exp1::¹
+::\exp2::²
+::\exp3::³
+::\exp4::⁴
+::\exp5::⁵
+::\exp6::⁶
+::\exp7::⁷
+::\exp8::⁸
+::\exp9::⁹
+::\sub0::₀
+::\sub1::₁
+::\sub2::₂
+::\sub3::₃
+::\sub4::₄
+::\sub5::₅
+::\sub6::₆
+::\sub7::₇
+::\sub8::₈
+::\sub9::₉
+
 /*
  *======*
  * MISC *
