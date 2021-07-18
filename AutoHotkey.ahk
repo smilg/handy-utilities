@@ -107,6 +107,27 @@ middle extra button gestures:
 ::\arrowNW::↖
 
 /*
+ *==========*
+ * CURRENCY *
+ *==========*
+ */
+::\cent::¢
+::\euro::€      ; EU
+::\pound::₤     ; GB
+::\yen::¥       ; JP
+::\shekel::₪    ; Israel
+::\rupee::₹     ; India
+::\ruble::₽     ; Russia
+::\lira::₺      ; Turkey
+::\baht::฿      ; Thailand
+::\afghani::؋   ; Afghanistan
+::\rial::﷼      ; Iran
+::\dram::֏      ; Armenia
+::\dong::₫      ; Vietnam
+::\peso::₱      ; Philippines
+::\btc::₿
+
+/*
  *======*
  * MATH *
  *======*
