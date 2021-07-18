@@ -177,7 +177,7 @@ middle extra button gestures:
 ::\sus::ඞ
 ::\shrug::¯\_(ツ)_/¯
 
-^!T::Run "C:\Users\jacob\handy-utilities\launchy\Shortcuts\Windows Terminal.lnk"
+^!T::Run "C:\Users\%A_UserName%\handy-utilities\launchy\Shortcuts\Windows Terminal.lnk"
 #+b::SoundPlay bruhsoundeffect2.wav	;Win+Shift+B play bruh sound effect 2
 #+Space::Media_Play_Pause
 #F12::Run "scripts\cubeswitch.pyw" cube_lamp_toggle	;toggle cube lamp
