@@ -94,7 +94,7 @@ middle extra button gestures:
 
 /*
  *=========*
- * SYMBOLS *
+ * ARROWS *
  *=========*
  */
 ::\arrowN::↑
