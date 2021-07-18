@@ -97,6 +97,14 @@ middle extra button gestures:
  * SYMBOLS *
  *=========*
  */
+::\arrowN::↑
+::\arrowNE::↗
+::\arrowE::→
+::\arrowSE::↘
+::\arrowS::↓
+::\arrowSW::↙
+::\arrowW::←
+::\arrowNW::↖
 
 /*
  *======*
