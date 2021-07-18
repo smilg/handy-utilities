@@ -1,5 +1,6 @@
 ﻿GroupAdd, Browsers, ahk_exe firefox.exe
 GroupAdd, Browsers, ahk_exe brave.exe
+GroupAdd, Browsers, ahk_exe chrome.exe
 
 /*
 MOUSE BUTTONS:
