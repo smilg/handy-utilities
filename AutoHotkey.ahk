@@ -32,6 +32,7 @@ middle extra button gestures:
  */
 ::\endash::–
 ::\emdash::—
+::\interrobang::‽
 
 /*
  *===============*
@@ -96,7 +97,6 @@ middle extra button gestures:
  * SYMBOLS *
  *=========*
  */
-::\interrobang::‽
 
 /*
  *======*
