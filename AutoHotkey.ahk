@@ -16,8 +16,15 @@ middle extra button gestures:
 
 */
 
-::\emdash::—	;em dash hotstring
-::\endash::–	;en dash hotstring
+
+/*=====================*
+ *					   *
+ *  SYMBOL HOTSTRINGS  *
+ *					   *
+ *=====================*/
+
+::\endash::–
+::\emdash::—
 
 
 /*
