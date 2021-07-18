@@ -17,19 +17,25 @@ middle extra button gestures:
 */
 
 
-/*=====================*
- *					   *
- *  SYMBOL HOTSTRINGS  *
- *					   *
- *=====================*/
+/*==============*
+ *--------------*
+ *  HOTSTRINGS  *
+ *--------------*
+ *==============*/
 
+/*=============*
+ * PUNCTUATION *
+ *=============*/
 ::\endash::–
 ::\emdash::—
 
+/*===============*
+ * GREEK LETTERS *
+ *===============*/
 
-/*
- * GREEK LETTERS
- */
+;Uppercase: \\letter
+;Lowercase: \.letter
+
 ::\\Alpha::Α
 ::\.alpha::α
 ::\\Beta::Β
@@ -79,7 +85,14 @@ middle extra button gestures:
 ::\\Omega::Ω
 ::\.omega::ω
 
+/*=========*
+ * SYMBOLS *
+ *=========*/
 
+
+/*======*
+ * MISC *
+ *======*/
 ::\sus::ඞ
 ::\shrug::¯\_(ツ)_/¯
 
