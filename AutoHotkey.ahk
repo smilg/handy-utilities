@@ -32,6 +32,7 @@ middle extra button gestures:
  */
 ::\endash::–
 ::\emdash::—
+::--::—
 ::\interrobang::‽
 
 /*
@@ -100,10 +101,12 @@ middle extra button gestures:
 ::\arrowN::↑
 ::\arrowNE::↗
 ::\arrowE::→
+::\->::→
 ::\arrowSE::↘
 ::\arrowS::↓
 ::\arrowSW::↙
 ::\arrowW::←
+::\<-::←
 ::\arrowNW::↖
 
 /*
