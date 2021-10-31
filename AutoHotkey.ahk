@@ -186,7 +186,7 @@ middle extra button gestures:
 #F12::Run "scripts\cubeswitch.pyw" cube_lamp_toggle	;toggle cube lamp
 #+F12::Run "scripts\cubeswitch.pyw" cube_lamp_bright	;brighten cube lamp 10%
 #!F12::Run "scripts\cubeswitch.pyw" cube_lamp_dim	;dim cube lamp 10%
-#!+R::Run "C:\Program Files\Rainmeter\Rainmeter.exe" !RefreshApp	;Win+Alt+Shift+R refresh all rainmeter skins
+#!+R::Run "C:\Program Files\Rainmeter\Rainmeter.exe" !LoadLayout "Bliss 1 Monitor"	;Win+Alt+Shift+R refresh all rainmeter skins
 #!+S::Run "scripts\screenoff.bat"	;Win+Alt+Shift+S turn off screen
 #+A::Run "scripts\amazonlinkconverter.pyw"  ;Win+Shift+A shorten amazon link
 
