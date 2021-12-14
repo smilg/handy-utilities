@@ -24,7 +24,7 @@ middle extra button gestures:
  *--------------*
  *==============*
  */
-
+ 
 /*
  *=============*
  * PUNCTUATION *
@@ -32,7 +32,7 @@ middle extra button gestures:
  */
 ::\endash::–
 ::\emdash::—
-::--::—
+::\--::—
 ::\interrobang::‽
 
 /*
