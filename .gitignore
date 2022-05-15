@@ -1,3 +1,6 @@
+# pickle files
+scripts/*.pkl
+
 # Non-custom Launchy files
 launchy/Launchy/*
 !launchy/Launchy/launchy.ini
