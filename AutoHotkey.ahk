@@ -183,9 +183,14 @@ middle extra button gestures:
 ^!T::Run "C:\Users\%A_UserName%\handy-utilities\launchy\Shortcuts\Windows Terminal.lnk"
 #+b::SoundPlay bruhsoundeffect2.wav	;Win+Shift+B play bruh sound effect 2
 #+Space::Media_Play_Pause
-#F12::Run "scripts\cubeswitch.pyw" cube_lamp_toggle	;toggle cube lamp
-#+F12::Run "scripts\cubeswitch.pyw" cube_lamp_bright	;brighten cube lamp 10%
-#!F12::Run "scripts\cubeswitch.pyw" cube_lamp_dim	;dim cube lamp 10%
+
+#F12::Run "scripts\cubeswitch_kasa.pyw" toggle	;toggle cube lamp
+#+F12::Run "scripts\cubeswitch_kasa.pyw" bright	;brighten cube lamp 10%
+#!F12::Run "scripts\cubeswitch_kasa.pyw" dim	;dim cube lamp 10%
+#+!F12::
+Input, OutputVar, L50, {Enter}{Esc}
+Run "scripts\cubeswitch_kasa.pyw" %OutputVar%
+Return
 #!+R::Run "C:\Program Files\Rainmeter\Rainmeter.exe" !LoadLayout "Bliss 1 Monitor"	;Win+Alt+Shift+R refresh all rainmeter skins
 #!+S::Run "scripts\screenoff.bat"	;Win+Alt+Shift+S turn off screen
 #+A::Run "scripts\amazonlinkconverter.pyw"  ;Win+Shift+A shorten amazon link
