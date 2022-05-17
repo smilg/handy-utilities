@@ -9,9 +9,7 @@ import pyperclip
 
 link = pyperclip.paste()
 
-pid_match = re.search(r"\/([A-Z0-9]{10})\/", link)  # type:ignore
-if pid_match == None:
-    pid_match = re.search(r"\/([A-Z0-9]{10})\?", link) # type:ignore
+pid_match = re.search(r"\/([A-Z0-9]{10})(?:\/|$)", link)
 if pid_match == None:
     exit()
 url = f"https://www.amzn.com/{pid_match.group(1)}"
