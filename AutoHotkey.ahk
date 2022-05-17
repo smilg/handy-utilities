@@ -221,5 +221,4 @@ F23::J	;quick mana
 F24::H	;quick heal
 F18::B	;quick buff
 F19::R	;mount
-
 Return
