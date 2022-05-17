@@ -1,4 +1,8 @@
-﻿GroupAdd, Browsers, ahk_exe firefox.exe
+﻿#NoEnv
+#SingleInstance Force
+SendMode Input
+
+GroupAdd, Browsers, ahk_exe firefox.exe
 GroupAdd, Browsers, ahk_exe brave.exe
 GroupAdd, Browsers, ahk_exe chrome.exe
 
