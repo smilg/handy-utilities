@@ -12,5 +12,5 @@ link = pyperclip.paste()
 pid_match = re.search(r"\/([A-Z0-9]{10})(?:\/|$)", link)
 if pid_match == None:
     exit()
-url = f"https://www.amzn.com/{pid_match.group(1)}"
+url = f"https://amzn.com/dp/{pid_match.group(1)}"
 pyperclip.copy(url)
