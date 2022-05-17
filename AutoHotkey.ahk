@@ -226,3 +226,44 @@ F24::H	;quick heal
 F18::B	;quick buff
 F19::R	;mount
 Return
+
+#IfWinActive ahk_exe isaac-ng.exe
+~Esc::
+~Enter::
+    turboenable := 0
+    Hotkey, *Up, Off
+    Hotkey, *Down, Off
+    Hotkey, *Left, Off
+    Hotkey, *Right, Off
+Return
+
+*Up::SpamKey("Up")
+*Down::SpamKey("Down")
+*Left::SpamKey("Left")
+*Right::SpamKey("Right")
+
+*\::
+    turboenable := !turboenable
+    if (turboenable) {
+        Hotkey, *Up, On
+        Hotkey, *Down, On
+        Hotkey, *Left, On
+        Hotkey, *Right, On
+    } else {
+        Hotkey, *Up, Off
+        Hotkey, *Down, Off
+        Hotkey, *Left, Off
+        Hotkey, *Right, Off
+    }
+Return
+
+SpamKey(key) {
+    While GetKeyState(key, "P") {
+        send % "{" . key . " down}"
+        Sleep, 60
+        send % "{" . key . " up}"
+        Sleep, 60
+    }
+}
+
+Return
