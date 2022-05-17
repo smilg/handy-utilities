@@ -14,5 +14,5 @@ if pid_match == None:
     pid_match = re.search(r"\/([A-Z0-9]{10})\?", link) # type:ignore
 if pid_match == None:
     exit()
-url = "https://www.amzn.com/{}".format(pid_match.group(1))
+url = f"https://www.amzn.com/{pid_match.group(1)}"
 pyperclip.copy(url)
