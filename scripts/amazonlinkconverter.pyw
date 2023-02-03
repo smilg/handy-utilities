@@ -1,9 +1,10 @@
+#! python3.8
 '''
 Shortens an Amazon link in the user's clipboard. Intended to be run by an AutoHotkey shortcut.
 To use, select a long amazon link, copy it, and run the script. Your clipboard now contains a
 shortened version of the same link.
 '''
-#! /usr/bin/python3.8
+
 import re
 import pyperclip
 
