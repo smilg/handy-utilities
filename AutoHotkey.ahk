@@ -6,6 +6,7 @@ GroupAdd, Browsers, ahk_exe firefox.exe
 GroupAdd, Browsers, ahk_exe brave.exe
 GroupAdd, Browsers, ahk_exe chrome.exe
 
+
 /*
 MOUSE BUTTONS:
 lower side button: F24
@@ -164,9 +165,19 @@ middle extra button gestures:
 ::\<=::≤
 ::\notequal::≠
 ::\degree::°
+::\deg::°
 ::\times::×
 ::\divide::÷
 ::\plusminus::±
+::\infinity::∞
+::\inf::∞
+
+/*
+ *===============*
+ * ABBREVIATIONS *
+ *===============*
+ */
+::\b/c::because
 
 /*
  *======*
@@ -184,10 +195,18 @@ middle extra button gestures:
 ::\sus::ඞ
 ::\shrug::¯\_(ツ)_/¯
 
-^!T::Run "C:\Users\%A_UserName%\handy-utilities\launchy\Shortcuts\Windows Terminal.lnk"
+^!T::Run wt.exe
+
+#+R::Reload
 #+b::SoundPlay bruhsoundeffect2.wav	;Win+Shift+B play bruh sound effect 2
 #+Space::Media_Play_Pause
 
+#^+D::
+WinGetActiveTitle, ActiveTitle
+Run "scripts\switchlaptopmon.bat"
+WinWaitNotActive %ActiveTitle%, , 1
+WinActivate, %ActiveTitle%
+Return
 #F12::Run "scripts\cubeswitch_kasa.pyw" toggle	;toggle cube lamp
 #+F12::Run "scripts\cubeswitch_kasa.pyw" bright	;brighten cube lamp 10%
 #!F12::Run "scripts\cubeswitch_kasa.pyw" dim	;dim cube lamp 10%
@@ -212,13 +231,13 @@ Return
 F18::,
 Return
 
-#IfWinActive ahk_exe javaw.exe
-F24::.
-F19::Numpad0
-F20::Numpad1
-F18::Numpad2
-F21::Numpad4
-Return
+; #IfWinActive ahk_exe javaw.exe
+; F24::.
+; F19::Numpad0
+; F20::Numpad1
+; F18::Numpad2
+; F21::Numpad4
+; Return
 
 #IfWinActive ahk_exe Terraria.exe
 F23::J	;quick mana
