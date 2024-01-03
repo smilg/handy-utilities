@@ -1,16 +1,14 @@
-﻿#NoEnv
+﻿#Requires AutoHotkey v2.0
 #SingleInstance Force
-SendMode Input
 
-GroupAdd, Browsers, ahk_exe firefox.exe
-GroupAdd, Browsers, ahk_exe brave.exe
-GroupAdd, Browsers, ahk_exe chrome.exe
-
+GroupAdd("Browsers", "ahk_exe firefox.exe")
+GroupAdd("Browsers", "ahk_exe brave.exe")
+GroupAdd("Browsers", "ahk_exe chrome.exe")
 
 /*
 MOUSE BUTTONS:
-lower side button: F24
-upper side button: F23
+front side button: F24
+back side button: F23
 
 middle extra button: F18
 middle extra button gestures:
@@ -161,6 +159,7 @@ middle extra button gestures:
 ::\sub8::₈
 ::\sub9::₉
 ::\approxequal::≈
+::\approx::≈
 ::\>=::≥
 ::\<=::≤
 ::\notequal::≠
@@ -195,41 +194,41 @@ middle extra button gestures:
 ::\sus::ඞ
 ::\shrug::¯\_(ツ)_/¯
 
-^!T::Run wt.exe
+^!T::Run("wt.exe")
 
 #+R::Reload
-#+b::SoundPlay bruhsoundeffect2.wav	;Win+Shift+B play bruh sound effect 2
+#+b::SoundPlay("bruhsoundeffect2.wav")	;Win+Shift+B play bruh sound effect 2
 #+Space::Media_Play_Pause
 
-#^+D::
-WinGetActiveTitle, ActiveTitle
-Run "scripts\switchlaptopmon.bat"
-WinWaitNotActive %ActiveTitle%, , 1
-WinActivate, %ActiveTitle%
-Return
-#F12::Run "scripts\cubeswitch_kasa.pyw" toggle	;toggle cube lamp
-#+F12::Run "scripts\cubeswitch_kasa.pyw" bright	;brighten cube lamp 10%
-#!F12::Run "scripts\cubeswitch_kasa.pyw" dim	;dim cube lamp 10%
-#+!F12::
-Input, OutputVar, L50, {Enter}{Esc}
-Run "scripts\cubeswitch_kasa.pyw" %OutputVar%
-Return
-#!+R::Run "C:\Program Files\Rainmeter\Rainmeter.exe" !LoadLayout "Bliss 1 Monitor"	;Win+Alt+Shift+R refresh all rainmeter skins
+; #^+D::
+; WinGetActiveTitle, ActiveTitle
+; Run "scripts\switchlaptopmon.bat"
+; WinWaitNotActive %ActiveTitle%, , 1
+; WinActivate, %ActiveTitle%
+; Return
+#F12::Run('"scripts\cubeswitch_kasa.pyw" toggle')	;toggle cube lamp
+#+F12::Run('"scripts\cubeswitch_kasa.pyw" bright')	;brighten cube lamp 10%
+#!F12::Run('"scripts\cubeswitch_kasa.pyw" dim')	;dim cube lamp 10%
+; #+!F12::
+; {
+; OutputVar := InputHook(L50, {Enter}{Esc})
+; Run "scripts\cubeswitch_kasa.pyw" %OutputVar%
+; Return
+; }
+#!+R::Run('"C:\Program Files\Rainmeter\Rainmeter.exe" !LoadLayout "Bliss 1 Monitor"')	;Win+Alt+Shift+R refresh all rainmeter skins
 #!+S::Run "scripts\screenoff.bat"	;Win+Alt+Shift+S turn off screen
 #+A::Run "scripts\amazonlinkconverter.pyw"  ;Win+Shift+A shorten amazon link
 
-#IfWinActive ahk_group Browsers
+#HotIf WinActive("ahk_group Browsers")
 F24::^Tab
 F23::^+Tab
 XButton1::^Tab
 XButton2::^+Tab
 F19::^t
 F20::^w
-Return
 
-#IfWinActive ahk_exe Inventor.exe
+#HotIf WinActive("ahk_exe Inventor.exe")
 F18::,
-Return
 
 ; #IfWinActive ahk_exe javaw.exe
 ; F24::.
@@ -239,50 +238,58 @@ Return
 ; F21::Numpad4
 ; Return
 
-#IfWinActive ahk_exe Terraria.exe
+#HotIf WinActive("ahk_exe Terraria.exe")
 F23::J	;quick mana
 F24::H	;quick heal
 F18::B	;quick buff
 F19::R	;mount
-Return
 
-#IfWinActive ahk_exe isaac-ng.exe
-~Esc::
-~Enter::
-    turboenable := 0
-    Hotkey, *Up, Off
-    Hotkey, *Down, Off
-    Hotkey, *Left, Off
-    Hotkey, *Right, Off
-Return
+#HotIf WinActive("xschem")
+F18::Ins    ; middle button insert component
+; F21::U      ; left gesture undo
+; F22::+U     ; right gesture redo
 
-*Up::SpamKey("Up")
-*Down::SpamKey("Down")
-*Left::SpamKey("Left")
-*Right::SpamKey("Right")
+; #HotIf WinActive(ahk_exe isaac-ng.exe)
+; ~Esc::
+; ~Enter::
+; {
+;     turboenable := 0
+;     HotKey(*Up, Off)
+;     HotKey(*Down, Off)
+;     HotKey(*Left, Off)
+;     HotKey(*Right, Off)
+; Return
+; }
 
-*\::
-    turboenable := !turboenable
-    if (turboenable) {
-        Hotkey, *Up, On
-        Hotkey, *Down, On
-        Hotkey, *Left, On
-        Hotkey, *Right, On
-    } else {
-        Hotkey, *Up, Off
-        Hotkey, *Down, Off
-        Hotkey, *Left, Off
-        Hotkey, *Right, Off
-    }
-Return
+; *Up::SpamKey("Up")
+; *Down::SpamKey("Down")
+; *Left::SpamKey("Left")
+; *Right::SpamKey("Right")
 
-SpamKey(key) {
-    While GetKeyState(key, "P") {
-        send % "{" . key . " down}"
-        Sleep, 60
-        send % "{" . key . " up}"
-        Sleep, 60
-    }
-}
+; *\::
+; {
+;     turboenable := !turboenable
+;     if (turboenable) {
+;         Hotkey(*Up, On)
+;         HotKey(*Down, On)
+;         HotKey(*Left, On)
+;         HotKey(*Right, On)
+;     } else {
+;         HotKey(*Up, Off)
+;         HotKey(*Down, Off)
+;         HotKey(*Left, Off)
+;         HotKey(*Right, Off)
+;     }
+; Return
+; }
 
-Return
+; SpamKey(key) {
+;     While GetKeyState(key, "P") {
+;         send % "{" . key . " down}"
+;         Sleep, 60
+;         send % "{" . key . " up}"
+;         Sleep, 60
+;     }
+; }
+
+; Return
